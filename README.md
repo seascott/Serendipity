@@ -10,11 +10,12 @@ See [docs/DESIGN.md](docs/DESIGN.md) for the product and technical design. This 
 apps/web                Next.js App Router
 apps/mobile             Expo / Expo Router
 packages/domain         zod models, rankScore, materialize()
-packages/api            Supabase client + explore() wrapper
+packages/api            Supabase client + explore() wrapper (`/core` is React-free)
+packages/catalog        Typed catalog (Git source of truth) + in-memory Plan/Explore demo
 packages/tokens         colors / spacing / type
-jobs/                   Node materialize worker
+jobs/                   Node workers: materialize, seed:sql, smoke
 supabase/migrations     v2 schema, RLS, explore() RPC
-supabase/seed           YAML source of truth (empty until P1)
+supabase/seed           catalog.sql generated from packages/catalog (do not edit)
 ```
 
 ## Local setup
@@ -41,8 +42,25 @@ pnpm --filter @serendipity/mobile dev
 Database (requires Docker + the [Supabase CLI](https://supabase.com/docs/guides/cli)):
 
 ```bash
-supabase start
+supabase start          # applies migrations, then loads supabase/seed/catalog.sql
 supabase db lint
+```
+
+The seed is rendered from `packages/catalog` (places, phenomena, rules, and the
+occurrences the engine materializes from them). After editing the catalog:
+
+```bash
+pnpm --filter @serendipity/jobs seed:sql          # regenerate supabase/seed/catalog.sql
+pnpm --filter @serendipity/jobs seed:sql --check  # CI: fail if the committed seed is stale
+supabase db reset                                 # reload locally
+```
+
+End-to-end smoke (anon `explore()` + `rank_score()` RPCs against the seeded DB;
+asserts SQL scores equal TypeScript `rankScore` for every row) — also run in CI:
+
+```bash
+eval "$(supabase status -o env)"
+SUPABASE_URL=$API_URL SUPABASE_ANON_KEY=$ANON_KEY pnpm --filter @serendipity/jobs smoke
 ```
 
 Copy `.env.example` to `apps/web/.env.local` after `supabase start` and fill in the printed URL and keys. Enable anonymous sign-in and email magic links in the local Auth settings.

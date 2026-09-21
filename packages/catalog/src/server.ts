@@ -10,3 +10,5 @@ export function getCatalog(): OccurrenceView[] {
 }
 
 export { seed };
+export { hydrateOccurrences } from "./hydrate";
+export type { OccurrenceRecord } from "./hydrate";

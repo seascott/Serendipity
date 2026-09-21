@@ -1,9 +1,21 @@
-import { type RRule, rrulestr } from "rrule";
+import * as rruleNs from "rrule";
+import type { RRule } from "rrule";
 import { rruleParamsSchema } from "../schemas";
 import type { OccurrenceDraft, PhenomenonInput, PlaceInput, RuleRecord } from "../types";
 import { RuleValidationError } from "../types";
 import { buildOccurrence, dayWindow } from "./build";
 import { addLocalDays, isoDateOf, localMidnight } from "./civil-time";
+
+type RRuleModule = typeof rruleNs;
+
+/** rrule ships a UMD `main` without `exports`, so Node ESM only exposes it as `default`. */
+function resolveRruleModule(ns: RRuleModule): RRuleModule {
+  if (typeof ns.rrulestr === "function") return ns;
+  const interop = ns as RRuleModule & { default?: RRuleModule };
+  return interop.default ?? ns;
+}
+
+const { rrulestr } = resolveRruleModule(rruleNs);
 
 /**
  * `rrule` is timezone-naive: it iterates civil dates on the UTC clock. We feed it

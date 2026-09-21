@@ -1,5 +1,5 @@
 import { buildItinerary, ITALY_WINDOW, places, tierExplore, travelLine } from "@serendipity/catalog";
-import { getCatalog } from "@serendipity/catalog/server";
+import type { Family } from "@serendipity/domain";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Itinerary } from "../../components/Itinerary";
@@ -9,6 +9,7 @@ import { JourneyMap } from "../../components/JourneyMap";
 import { JourneyChat } from "../../components/JourneyChat";
 import { StayLink } from "../../components/StayLink";
 import { TransitPanel } from "../../components/TransitPanel";
+import { loadOccurrences, occurrenceSource } from "../../lib/data/occurrences";
 import { EXPLORE_PROMPTS } from "../../lib/intent";
 import { pinsFromCards } from "../../lib/pins";
 import { ORIGINS, demoNow, type OriginKey } from "../../lib/now";
@@ -18,7 +19,12 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const FAMILIES = ["wildlife", "astronomy", "cultural", "seasonal_nature", "activity"] as const;
+const FAMILIES: readonly Family[] = ["wildlife", "astronomy", "cultural", "seasonal_nature", "activity"];
+
+function familyParam(value: string | undefined): Family[] | null {
+  const match = FAMILIES.find((family) => family === value);
+  return match ? [match] : null;
+}
 
 export default async function ExplorePage({
   searchParams,
@@ -28,12 +34,15 @@ export default async function ExplorePage({
   const params = await searchParams;
   const originKey = (params.origin && params.origin in ORIGINS ? params.origin : "florence") as OriginKey;
   const origin = ORIGINS[originKey];
-  const family = params.family && FAMILIES.includes(params.family as (typeof FAMILIES)[number])
-    ? [params.family]
-    : null;
+  const family = familyParam(params.family);
   const now = demoNow();
+  const source = occurrenceSource();
+  const rows = await loadOccurrences(
+    { origin, from: ITALY_WINDOW.from, to: ITALY_WINDOW.to, families: family },
+    source,
+  );
   const { nearby, detour, coming, sky } = tierExplore({
-    rows: getCatalog(),
+    rows,
     now,
     from: ITALY_WINDOW.from,
     to: ITALY_WINDOW.to,
@@ -190,6 +199,7 @@ export default async function ExplorePage({
         </section>
         <p className="explainer" style={{ marginTop: "1.5rem" }}>
           {places.find((place) => place.slug === "italy")?.blurb} Catalog cited, not scraped.
+          {source === "supabase" ? " Occurrences served by the explore() RPC." : " Occurrences from the in-memory demo catalog."}
         </p>
       </main>
     </>

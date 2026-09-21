@@ -7,7 +7,8 @@ create table place (
   kind text not null check (kind in ('point', 'park', 'city', 'region', 'country')),
   geom geography(geometry, 4326) not null,
   centroid geography(point, 4326) generated always as (st_pointonsurface(geom::geometry)::geography) stored,
-  bbox geometry(polygon, 4326) generated always as (st_envelope(geom::geometry)) stored,
+  -- st_expand keeps the envelope a polygon for point/degenerate geometries (~11 m pad).
+  bbox geometry(polygon, 4326) generated always as (st_envelope(st_expand(geom::geometry, 0.0001))) stored,
   country_code char(2),
   admin_code text,
   timezone text not null,

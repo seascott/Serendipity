@@ -412,7 +412,7 @@ Quality of the catalog *is* the product. Global-but-thin means breadth first, de
 2. **Editorial layer**: 300–500 words per indexable `phenomenon_place` pair (LLM-drafted, human-reviewed, named editor). This is the SEO plan's binding constraint — see founder question 1.
 3. **Ingest pipelines** (Node jobs, idempotent, content-addressed inputs): astronomy (NASA eclipse paths, IMO calendar, `astronomy-engine`); cultural (Wikidata festivals, holiday tables for moveable feasts); wildlife/nature (expert `seasonal_band` rules with gradients, later fitted from eBird/GBIF/iNaturalist histograms — check commercial terms per source); activities (operator seasons from affiliate catalogs — verify derived-data reuse is permitted by API terms).
 4. **Ground-truth loop**: `report(phenomenon, place, seen_at)` histograms → moderated rule proposals → version bump → regeneration.
-5. **Licensing**: `source.license`, `terms_url`, `commercial_ok`; CC-BY/CC0/own media only; original text. `supabase/seed/*.yaml` stays the human-editable source of truth so the DB is reproducible from Git **[decision: Git vs Admin as rule source of truth]**.
+5. **Licensing**: `source.license`, `terms_url`, `commercial_ok`; CC-BY/CC0/own media only; original text. `packages/catalog` (typed TS, zod-validated) is the human-editable source of truth, rendered to `supabase/seed/catalog.sql` by `jobs seed:sql` so the DB is reproducible from Git and CI fails on a stale seed **[decision: Git vs Admin as rule source of truth]**.
 
 ## 7. MVP Scope & Roadmap
 
@@ -452,7 +452,7 @@ serendipity/
 ├── supabase/
 │   ├── migrations/         # v2 schema above (plain SQL; portable)
 │   ├── functions/          # edge functions: request-path webhooks only
-│   └── seed/               # phenomena.yaml, places.yaml, rules.yaml, sources.yaml
+│   └── seed/               # catalog.sql — generated from packages/catalog (seed:sql --check in CI)
 ├── data/tables/            # eclipses.json, meteor_showers.json, holidays.json (content-addressed)
 ├── docs/                   # this file, ADRs, reviews/
 └── .github/workflows/      # typecheck + lint + test + supabase db lint + nightly materialize

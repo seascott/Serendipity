@@ -33,6 +33,18 @@ export type ExploreArgs = {
   interests?: string[] | null;
 };
 
+export type RankScoreArgs = {
+  during: string;
+  peak: string | null;
+  confidence: number;
+  dist_m: number;
+  radius_m: number;
+  now_ts: string;
+  tags: string[];
+  interests: string[] | null;
+  spectacle?: number | null;
+};
+
 export type Database = {
   public: {
     Tables: {
@@ -56,6 +68,10 @@ export type Database = {
       explore: {
         Args: ExploreArgs;
         Returns: ExploreRow[];
+      };
+      rank_score: {
+        Args: RankScoreArgs;
+        Returns: number;
       };
     };
     Enums: Record<string, never>;

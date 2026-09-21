@@ -1,6 +1,7 @@
 import { DateTime } from "luxon";
 import { describe, expect, it } from "vitest";
 import { interestMatch, rankScore, travelBand } from "../src/rank-score";
+import { RANK_VECTORS } from "../src/rank-vectors";
 
 const during = {
   start: DateTime.fromISO("2026-06-01T00:00:00Z").toJSDate(),
@@ -43,6 +44,23 @@ describe("rankScore", () => {
   it("applies the 1.4 detour factor in travelBand", () => {
     expect(travelBand(100_000, 140_000)).toBeCloseTo(0, 5);
     expect(travelBand(0, 100_000)).toBe(1);
+  });
+
+  it("reproduces the shared TS/SQL parity vectors", () => {
+    for (const vector of RANK_VECTORS) {
+      const score = rankScore({
+        now: new Date(vector.now),
+        during: { start: new Date(vector.during.start), end: new Date(vector.during.end) },
+        peak: vector.peak ? { start: new Date(vector.peak.start), end: new Date(vector.peak.end) } : null,
+        confidence: vector.confidence,
+        distM: vector.distM,
+        radiusM: vector.radiusM,
+        tags: vector.tags,
+        interests: vector.interests,
+        spectacle: vector.spectacle,
+      });
+      expect(score, vector.name).toBeCloseTo(vector.expected, 9);
+    }
   });
 
   it("caps interest overlap at 3 tags", () => {
