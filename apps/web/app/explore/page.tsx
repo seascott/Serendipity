@@ -155,11 +155,15 @@ export default async function ExplorePage({
         <section className="tier detour">
           <h2>Worth a detour</h2>
           <p className="explainer">Further out, still in your fortnight — rail range, with distance on each card</p>
-          <div className="cards" style={{ marginTop: "1rem" }}>
-            {detour.map((card) => (
-              <PhenomenonCard key={card.id} card={card} />
-            ))}
-          </div>
+          {detour.length ? (
+            <div className="cards" style={{ marginTop: "1rem" }}>
+              {detour.map((card) => (
+                <PhenomenonCard key={card.id} card={card} />
+              ))}
+            </div>
+          ) : (
+            <p className="empty">Nothing between 150 and 450 km is in window for this filter.</p>
+          )}
         </section>
 
         <section className="tier">

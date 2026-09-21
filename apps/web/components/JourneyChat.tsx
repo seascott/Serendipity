@@ -18,7 +18,8 @@ export function JourneyChat({
 }) {
   const router = useRouter();
   const [value, setValue] = useState("");
-  const [messages, setMessages] = useState<Message[]>([{ role: "guide", body: intro }]);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const log: Message[] = [{ role: "guide", body: intro }, ...messages];
 
   function submit(text: string) {
     const trimmed = text.trim();
@@ -40,7 +41,7 @@ export function JourneyChat({
     <section className="journey-chat" aria-label="Configure this journey">
       <p className="label">Ask Serendipity</p>
       <div className="chat-log">
-        {messages.map((message, index) => (
+        {log.map((message, index) => (
           <div key={`${message.role}-${index}`} className={`chat-bubble ${message.role}`}>
             {message.title ? <strong>{message.title}</strong> : null}
             <p>{message.body}</p>

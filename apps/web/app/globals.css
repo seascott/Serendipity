@@ -1029,6 +1029,12 @@ h3 { font-size: 1.32rem; margin: 0; line-height: 1.2; }
   border-radius: 14px;
   background: #e8e0ce;
 }
+/* Leaflet panes use z-index up to 1000; keep them beneath the sticky header/context bar. */
+.journey-map, .leaflet-container {
+  position: relative;
+  isolation: isolate;
+  z-index: 0;
+}
 .journey-map-fallback {
   display: grid;
   place-items: center;
