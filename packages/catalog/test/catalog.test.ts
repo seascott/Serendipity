@@ -28,6 +28,23 @@ describe("catalog seed", () => {
     expect(sky.length).toBeGreaterThanOrEqual(1);
   });
 
+  it("keeps the sky band when a family filter narrows the placed tiers", () => {
+    const query = {
+      rows: getCatalog(),
+      now: DEMO_NOW,
+      from: ITALY_WINDOW.from,
+      to: ITALY_WINDOW.to,
+      origin: { lat: florence.lat, lng: florence.lng },
+    };
+    const all = tierExplore(query);
+    const cultural = tierExplore({ ...query, families: ["cultural"] });
+    expect(cultural.sky.map((card) => card.id)).toEqual(all.sky.map((card) => card.id));
+    expect(cultural.sky.map((card) => card.phenomenon.slug)).toEqual(
+      expect.arrayContaining(["september-equinox", "harvest-full-moon"]),
+    );
+    expect([...cultural.nearby, ...cultural.detour].every((card) => card.family === "cultural")).toBe(true);
+  });
+
   it("emits one Harvest Moon and one September equinox per year", () => {
     const rows = getCatalog();
     const harvest = rows.filter((row) => row.phenomenon.slug === "harvest-full-moon");

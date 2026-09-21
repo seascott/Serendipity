@@ -1,7 +1,6 @@
 import { createSerendipityClient, explore } from "@serendipity/api/core";
 import type { OccurrenceView } from "@serendipity/catalog";
 import { getCatalog, hydrateOccurrences } from "@serendipity/catalog/server";
-import type { Family } from "@serendipity/domain";
 import { publicEnv } from "../env";
 
 /**
@@ -23,10 +22,13 @@ export type ExploreQuery = {
   origin: { lat: number; lng: number };
   from: Date;
   to: Date;
-  families?: Family[] | null;
 };
 
-/** Widest tier plus the "coming up" horizon, so tiering stays a pure function of the rows. */
+/**
+ * Widest tier plus the "coming up" horizon, so tiering stays a pure function of the
+ * rows. Family filtering is deliberately left to `tierExplore` too: it applies only
+ * to place-scoped tiers, while the sky band keeps every global occurrence.
+ */
 const SEARCH_RADIUS_M = 2_000_000;
 const UPCOMING_HORIZON_MS = 90 * 86_400_000;
 
@@ -44,7 +46,6 @@ export async function loadOccurrences(
     radius_m: SEARCH_RADIUS_M,
     from_ts: query.from.toISOString(),
     to_ts: new Date(query.to.getTime() + UPCOMING_HORIZON_MS).toISOString(),
-    families: query.families ?? null,
   });
   return hydrateOccurrences(rows);
 }

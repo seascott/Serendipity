@@ -37,10 +37,7 @@ export default async function ExplorePage({
   const family = familyParam(params.family);
   const now = demoNow();
   const source = occurrenceSource();
-  const rows = await loadOccurrences(
-    { origin, from: ITALY_WINDOW.from, to: ITALY_WINDOW.to, families: family },
-    source,
-  );
+  const rows = await loadOccurrences({ origin, from: ITALY_WINDOW.from, to: ITALY_WINDOW.to }, source);
   const { nearby, detour, coming, sky } = tierExplore({
     rows,
     now,
