@@ -1,5 +1,5 @@
 /** Bump when materialize() output changes in a non-identical way. Golden tests fail if you forget. */
-export const ENGINE_VERSION = "0.1.0";
+export const ENGINE_VERSION = "0.1.1";
 
 /** DNS namespace used for deterministic occurrence ids (uuid v5). */
 export const OCCURRENCE_NAMESPACE = "a1f3c8e0-5e2b-4d7a-9c11-8b0e4f2a6d19";

@@ -42,6 +42,26 @@ export const astronomicalParamsSchema = z.object({
   filter: z.record(z.string(), z.unknown()).default({}),
 });
 
+export const seasonEventSchema = z.enum(["mar_equinox", "jun_solstice", "sep_equinox", "dec_solstice"]);
+
+export const moonPhaseSchema = z.enum(["new", "first_quarter", "full", "last_quarter"]);
+
+/** `equinox` table filter: pick the season events to emit (default: all four). */
+export const equinoxFilterSchema = z.object({
+  events: z.array(seasonEventSchema).min(1).default(["mar_equinox", "jun_solstice", "sep_equinox", "dec_solstice"]),
+});
+
+/**
+ * `moon_phase` table filter. `months` restricts to civil UTC months; `nearestTo`
+ * keeps only the single phase instant closest to a season event (e.g. the Harvest
+ * Moon is the full moon nearest the September equinox).
+ */
+export const moonPhaseFilterSchema = z.object({
+  phase: z.union([moonPhaseSchema, z.array(moonPhaseSchema).min(1)]).default(["new", "first_quarter", "full", "last_quarter"]),
+  months: z.array(z.number().int().min(1).max(12)).min(1).optional(),
+  nearestTo: seasonEventSchema.optional(),
+});
+
 export const seasonalBandParamsSchema = z.object({
   peakDoy: z.number().int().min(1).max(366),
   halfWidthDays: z.number().positive(),
@@ -114,3 +134,7 @@ export type FixedAnnualParams = z.infer<typeof fixedAnnualParamsSchema>;
 export type RRuleParams = z.infer<typeof rruleParamsSchema>;
 export type ExplicitParams = z.infer<typeof explicitParamsSchema>;
 export type AstronomicalParams = z.infer<typeof astronomicalParamsSchema>;
+export type SeasonEvent = z.infer<typeof seasonEventSchema>;
+export type MoonPhase = z.infer<typeof moonPhaseSchema>;
+export type EquinoxFilter = z.infer<typeof equinoxFilterSchema>;
+export type MoonPhaseFilter = z.infer<typeof moonPhaseFilterSchema>;

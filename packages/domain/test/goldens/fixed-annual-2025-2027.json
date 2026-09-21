@@ -30,7 +30,7 @@
     },
     "status": "published",
     "ruleVersion": 1,
-    "engineVersion": "0.1.0"
+    "engineVersion": "0.1.1"
   },
   {
     "id": "7be64597-ea45-5e80-88e5-ea39b3094811",
@@ -63,7 +63,7 @@
     },
     "status": "published",
     "ruleVersion": 1,
-    "engineVersion": "0.1.0"
+    "engineVersion": "0.1.1"
   },
   {
     "id": "a52bb167-ce60-5d8e-ace5-e197871ed6b1",
@@ -96,6 +96,6 @@
     },
     "status": "published",
     "ruleVersion": 1,
-    "engineVersion": "0.1.0"
+    "engineVersion": "0.1.1"
   }
 ]

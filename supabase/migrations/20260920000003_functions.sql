@@ -140,6 +140,21 @@ as $$
   end;
 $$;
 
+create or replace function interest_match(tags text[], interests text[])
+returns double precision
+language sql
+immutable
+parallel safe
+as $$
+  select case
+    when interests is null or cardinality(interests) = 0 then 0
+    else least(
+      (select count(distinct t) from unnest(coalesce(tags, '{}')) as t where t = any (interests)),
+      3
+    )::double precision / 3.0
+  end;
+$$;
+
 create or replace function rank_score(
   during tstzrange,
   peak tstzrange,
@@ -160,10 +175,7 @@ as $$
     0.35 * peak_proximity(now_ts, peak, during)
     + 0.25 * travel_band(dist_m, radius_m)
     + 0.20 * confidence::double precision
-    + 0.10 * (
-      least(cardinality(coalesce(tags, '{}') & coalesce(interests, '{}')), 3)::double precision
-      / 3.0
-    )
+    + 0.10 * interest_match(tags, interests)
     + 0.10 * ((coalesce(spectacle, 3) - 1)::double precision / 4.0);
 $$;
 
@@ -255,11 +267,18 @@ as $$
       c.tags,
       interests,
       p.spectacle
-    )
+    ) as score
   from cand c
-  left join phenomenon p on p.id = c.phenomenon_id
-  left join place pl on pl.id = c.place_id
-  order by 20 desc
+  join phenomenon p
+    on p.id = c.phenomenon_id
+   and p.status = 'published'
+   and p.deleted_at is null
+  left join place pl
+    on pl.id = c.place_id
+   and pl.status = 'published'
+   and pl.deleted_at is null
+  where c.place_id is null or pl.id is not null
+  order by score desc
   limit 50;
 $$;
 

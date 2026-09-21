@@ -28,6 +28,22 @@ describe("catalog seed", () => {
     expect(sky.length).toBeGreaterThanOrEqual(1);
   });
 
+  it("emits one Harvest Moon and one September equinox per year", () => {
+    const rows = getCatalog();
+    const harvest = rows.filter((row) => row.phenomenon.slug === "harvest-full-moon");
+    expect(harvest.map((row) => row.seasonKey)).toEqual(["2025-10-07-full", "2026-09-26-full", "2027-09-15-full"]);
+    const equinox = rows.filter((row) => row.phenomenon.slug === "september-equinox");
+    expect(equinox.map((row) => row.seasonKey)).toEqual(["2025-sep-equinox", "2026-sep-equinox", "2027-sep-equinox"]);
+  });
+
+  it("keeps Italian Saturday fairs on Saturdays in Europe/Rome", () => {
+    const saturdays = getCatalog().filter((row) => row.rule.kind === "rrule" && row.place?.timezone === "Europe/Rome");
+    expect(saturdays.length).toBeGreaterThan(10);
+    for (const row of saturdays) {
+      expect(DateTime.fromISO(row.during.start, { zone: "Europe/Rome" }).weekday).toBe(6);
+    }
+  });
+
   it("covers all twelve months in the Planet Earth year", () => {
     const collection = collections[0]!;
     const bands = yearBands(getCatalog(), collection, 2026);

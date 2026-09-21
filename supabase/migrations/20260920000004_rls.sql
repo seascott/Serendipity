@@ -135,4 +135,5 @@ grant execute on function explore(double precision, double precision, double pre
 grant execute on function get_shared_trip(text) to anon, authenticated;
 grant execute on function rank_score(tstzrange, tstzrange, numeric, double precision, double precision, timestamptz, text[], text[], smallint) to anon, authenticated;
 grant execute on function peak_proximity(timestamptz, tstzrange, tstzrange) to anon, authenticated;
+grant execute on function interest_match(text[], text[]) to anon, authenticated;
 grant execute on function travel_band(double precision, double precision) to anon, authenticated;

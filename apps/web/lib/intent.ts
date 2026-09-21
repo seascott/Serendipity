@@ -9,10 +9,11 @@ export type JourneyIntent = {
   mode: "plan" | "explore" | "ask";
 };
 
-function originFrom(text: string): OriginKey {
+function originFrom(text: string, fallback: OriginKey = "florence"): OriginKey {
   if (/\brome\b|roma\b/.test(text)) return "rome";
   if (/\bvenice\b|venezia\b/.test(text)) return "venice";
-  return "florence";
+  if (/\bflorence\b|firenze\b/.test(text)) return "florence";
+  return fallback;
 }
 
 function familyFrom(text: string): string | null {
@@ -47,8 +48,10 @@ export function interpretJourney(
       text,
     );
 
+  const currentOrigin = current?.mode === "explore" ? current.origin : undefined;
+
   if (wantsExplore && !wantsPlan) {
-    const origin = originFrom(text);
+    const origin = originFrom(text, currentOrigin);
     const family = familyFrom(text);
     const query = new URLSearchParams({
       origin,
@@ -107,7 +110,7 @@ export function interpretJourney(
   }
 
   if (wantsExplore) {
-    const origin = originFrom(text);
+    const origin = originFrom(text, currentOrigin);
     return {
       href: `/explore?origin=${origin}&from=2026-09-20&to=2026-10-04`,
       mode: "explore",

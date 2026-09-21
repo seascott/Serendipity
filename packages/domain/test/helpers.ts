@@ -22,6 +22,22 @@ export const newYork: PlaceInput = {
   hemisphere: "N",
 };
 
+export const alba: PlaceInput = {
+  id: "66666666-6666-4666-8666-666666666666",
+  timezone: "Europe/Rome",
+  latitude: 44.7,
+  longitude: 8.03,
+  hemisphere: "N",
+};
+
+export const auckland: PlaceInput = {
+  id: "77777777-7777-4777-8777-777777777777",
+  timezone: "Pacific/Auckland",
+  latitude: -36.85,
+  longitude: 174.76,
+  hemisphere: "S",
+};
+
 export const monarch: PhenomenonInput = {
   id: "33333333-3333-4333-8333-333333333333",
   family: "wildlife",

@@ -1,0 +1,147 @@
+[
+  {
+    "id": "61c72bf5-95d3-5ff5-82c6-1bd2704a7496",
+    "ruleId": "77777777-7777-4777-8777-777777777771",
+    "phenomenonId": "44444444-4444-4444-8444-444444444444",
+    "placeId": "66666666-6666-4666-8666-666666666666",
+    "scope": "place",
+    "seasonKey": "2026-10-03",
+    "family": "cultural",
+    "tags": [
+      "market"
+    ],
+    "during": {
+      "start": "2026-10-02T22:00:00.000Z",
+      "end": "2026-10-04T22:00:00.000Z"
+    },
+    "peak": null,
+    "granularity": "day",
+    "confidence": 0.85,
+    "geom": {
+      "type": "Point",
+      "coordinates": [
+        8.03,
+        44.7
+      ]
+    },
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "9ad88ba8-985b-5035-947b-d491dfc23a4a",
+    "ruleId": "77777777-7777-4777-8777-777777777771",
+    "phenomenonId": "44444444-4444-4444-8444-444444444444",
+    "placeId": "66666666-6666-4666-8666-666666666666",
+    "scope": "place",
+    "seasonKey": "2026-10-10",
+    "family": "cultural",
+    "tags": [
+      "market"
+    ],
+    "during": {
+      "start": "2026-10-09T22:00:00.000Z",
+      "end": "2026-10-11T22:00:00.000Z"
+    },
+    "peak": null,
+    "granularity": "day",
+    "confidence": 0.85,
+    "geom": {
+      "type": "Point",
+      "coordinates": [
+        8.03,
+        44.7
+      ]
+    },
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "9969491d-4919-5fc1-995f-c0f0cf43cb26",
+    "ruleId": "77777777-7777-4777-8777-777777777771",
+    "phenomenonId": "44444444-4444-4444-8444-444444444444",
+    "placeId": "66666666-6666-4666-8666-666666666666",
+    "scope": "place",
+    "seasonKey": "2026-10-17",
+    "family": "cultural",
+    "tags": [
+      "market"
+    ],
+    "during": {
+      "start": "2026-10-16T22:00:00.000Z",
+      "end": "2026-10-18T22:00:00.000Z"
+    },
+    "peak": null,
+    "granularity": "day",
+    "confidence": 0.85,
+    "geom": {
+      "type": "Point",
+      "coordinates": [
+        8.03,
+        44.7
+      ]
+    },
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "f6d695d3-e3f8-51f3-9a49-ff5f94587740",
+    "ruleId": "77777777-7777-4777-8777-777777777771",
+    "phenomenonId": "44444444-4444-4444-8444-444444444444",
+    "placeId": "66666666-6666-4666-8666-666666666666",
+    "scope": "place",
+    "seasonKey": "2026-10-24",
+    "family": "cultural",
+    "tags": [
+      "market"
+    ],
+    "during": {
+      "start": "2026-10-23T22:00:00.000Z",
+      "end": "2026-10-25T23:00:00.000Z"
+    },
+    "peak": null,
+    "granularity": "day",
+    "confidence": 0.85,
+    "geom": {
+      "type": "Point",
+      "coordinates": [
+        8.03,
+        44.7
+      ]
+    },
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "bc216fc1-aadd-5294-aaf1-bb154e9178f6",
+    "ruleId": "77777777-7777-4777-8777-777777777771",
+    "phenomenonId": "44444444-4444-4444-8444-444444444444",
+    "placeId": "66666666-6666-4666-8666-666666666666",
+    "scope": "place",
+    "seasonKey": "2026-10-31",
+    "family": "cultural",
+    "tags": [
+      "market"
+    ],
+    "during": {
+      "start": "2026-10-30T23:00:00.000Z",
+      "end": "2026-11-01T23:00:00.000Z"
+    },
+    "peak": null,
+    "granularity": "day",
+    "confidence": 0.85,
+    "geom": {
+      "type": "Point",
+      "coordinates": [
+        8.03,
+        44.7
+      ]
+    },
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  }
+]

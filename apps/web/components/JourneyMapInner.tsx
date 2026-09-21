@@ -1,8 +1,9 @@
 "use client";
 
-import { MapContainer, Marker, Popup, TileLayer, CircleMarker } from "react-leaflet";
+import { MapContainer, Marker, Popup, TileLayer, CircleMarker, useMap } from "react-leaflet";
 import L from "leaflet";
 import Link from "next/link";
+import { useEffect } from "react";
 import { imagerySrc } from "../lib/imagery";
 import type { JourneyPin } from "../lib/pins";
 import "leaflet/dist/leaflet.css";
@@ -15,6 +16,16 @@ function pinIcon(family: string, tier?: number) {
     iconAnchor: [9, 9],
     popupAnchor: [0, -10],
   });
+}
+
+/** MapContainer reads center/zoom only on mount; keep the viewport following prop changes. */
+function ViewportSync({ center, zoom }: { center: [number, number]; zoom: number }) {
+  const map = useMap();
+  const [lat, lng] = center;
+  useEffect(() => {
+    map.setView([lat, lng], zoom, { animate: true });
+  }, [map, lat, lng, zoom]);
+  return null;
 }
 
 export default function JourneyMapInner({
@@ -30,6 +41,7 @@ export default function JourneyMapInner({
 }) {
   return (
     <MapContainer center={center} zoom={zoom} className="journey-map" scrollWheelZoom={false}>
+      <ViewportSync center={center} zoom={zoom} />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -1,97 +1,122 @@
 import { NextMoonQuarter, SearchMoonQuarter, Seasons } from "astronomy-engine";
-import { astronomicalParamsSchema } from "../schemas";
+import type { z } from "zod";
+import {
+  astronomicalParamsSchema,
+  equinoxFilterSchema,
+  moonPhaseFilterSchema,
+  type MoonPhase,
+  type SeasonEvent,
+} from "../schemas";
 import type { OccurrenceDraft, PhenomenonInput, PlaceInput, RuleRecord } from "../types";
 import { RuleValidationError, UnsupportedRuleKindError } from "../types";
 import { buildOccurrence, instantWindow } from "./build";
 
-const PHASE_NAMES = ["new", "first_quarter", "full", "last_quarter"] as const;
+const PHASE_NAMES: readonly MoonPhase[] = ["new", "first_quarter", "full", "last_quarter"];
 
-function wantedPhases(filter: Record<string, unknown>): Set<number> {
-  const raw = filter.phase ?? filter.phases;
-  if (raw == null) return new Set([0, 1, 2, 3]);
-  const values = Array.isArray(raw) ? raw : [raw];
-  const wanted = new Set<number>();
-  for (const value of values) {
-    if (typeof value === "number" && value >= 0 && value <= 3) {
-      wanted.add(value);
-      continue;
-    }
-    if (typeof value === "string") {
-      const idx = PHASE_NAMES.indexOf(value as (typeof PHASE_NAMES)[number]);
-      if (idx >= 0) wanted.add(idx);
-    }
+const SEASON_KEYS: Record<SeasonEvent, string> = {
+  mar_equinox: "mar-equinox",
+  jun_solstice: "jun-solstice",
+  sep_equinox: "sep-equinox",
+  dec_solstice: "dec-solstice",
+};
+
+function seasonEventDate(year: number, event: SeasonEvent): Date {
+  const seasons = Seasons(year);
+  switch (event) {
+    case "mar_equinox":
+      return seasons.mar_equinox.date;
+    case "jun_solstice":
+      return seasons.jun_solstice.date;
+    case "sep_equinox":
+      return seasons.sep_equinox.date;
+    case "dec_solstice":
+      return seasons.dec_solstice.date;
   }
-  if (wanted.size === 0) {
-    throw new RuleValidationError("astronomical moon_phase filter matched no phases");
+}
+
+function parseFilter<T>(schema: z.ZodType<T>, filter: unknown, table: string): T {
+  const result = schema.safeParse(filter);
+  if (!result.success) {
+    throw new RuleValidationError(`invalid astronomical ${table} filter: ${result.error.message}`);
   }
-  return wanted;
+  return result.data;
 }
 
 function materializeMoonPhases(
   rule: RuleRecord,
   phenomenon: PhenomenonInput,
   seasonYear: number,
-  filter: Record<string, unknown>,
+  rawFilter: unknown,
 ): OccurrenceDraft[] {
-  const wanted = wantedPhases(filter);
+  const filter = parseFilter(moonPhaseFilterSchema.strict(), rawFilter, "moon_phase");
+  const wanted = new Set<number>(
+    (Array.isArray(filter.phase) ? filter.phase : [filter.phase]).map((name) => PHASE_NAMES.indexOf(name)),
+  );
+  const months = filter.months ? new Set(filter.months) : null;
+
   const start = new Date(Date.UTC(seasonYear - 1, 11, 15));
   const end = new Date(Date.UTC(seasonYear + 1, 0, 15));
   let quarter = SearchMoonQuarter(start);
-  const rows: OccurrenceDraft[] = [];
+  let instants: { at: Date; phase: MoonPhase }[] = [];
 
   while (quarter.time.date < end) {
     const at = quarter.time.date;
-    if (at.getUTCFullYear() === seasonYear && wanted.has(quarter.quarter)) {
-      const { during, peak } = instantWindow(at);
-      const seasonKey = at.toISOString().slice(0, 10);
-      rows.push(
-        buildOccurrence({
-          rule,
-          phenomenon,
-          place: null,
-          seasonKey: `${seasonKey}-${PHASE_NAMES[quarter.quarter]}`,
-          during,
-          peak,
-          granularity: "instant",
-        }),
-      );
+    if (
+      at.getUTCFullYear() === seasonYear &&
+      wanted.has(quarter.quarter) &&
+      (!months || months.has(at.getUTCMonth() + 1))
+    ) {
+      instants.push({ at, phase: PHASE_NAMES[quarter.quarter]! });
     }
     quarter = NextMoonQuarter(quarter);
   }
-  return rows;
+
+  if (filter.nearestTo && instants.length > 0) {
+    const anchor = seasonEventDate(seasonYear, filter.nearestTo).getTime();
+    instants = [
+      instants.reduce((best, candidate) =>
+        Math.abs(candidate.at.getTime() - anchor) < Math.abs(best.at.getTime() - anchor) ? candidate : best,
+      ),
+    ];
+  }
+
+  return instants.map(({ at, phase }) => {
+    const { during, peak } = instantWindow(at);
+    return buildOccurrence({
+      rule,
+      phenomenon,
+      place: null,
+      seasonKey: `${at.toISOString().slice(0, 10)}-${phase}`,
+      during,
+      peak,
+      granularity: "instant",
+    });
+  });
 }
 
 function materializeEquinoxes(
   rule: RuleRecord,
   phenomenon: PhenomenonInput,
   seasonYear: number,
-  filter: Record<string, unknown>,
+  rawFilter: unknown,
 ): OccurrenceDraft[] {
-  const includeSolstice = filter.solstice !== false && filter.events !== "equinox_only";
-  const seasons = Seasons(seasonYear);
-  const events: { key: string; at: Date }[] = [
-    { key: "mar-equinox", at: seasons.mar_equinox.date },
-    { key: "sep-equinox", at: seasons.sep_equinox.date },
-  ];
-  if (includeSolstice) {
-    events.push(
-      { key: "jun-solstice", at: seasons.jun_solstice.date },
-      { key: "dec-solstice", at: seasons.dec_solstice.date },
-    );
-  }
+  const filter = parseFilter(equinoxFilterSchema.strict(), rawFilter, "equinox");
+  const ordered: SeasonEvent[] = ["mar_equinox", "sep_equinox", "jun_solstice", "dec_solstice"];
 
-  return events.map((event) => {
-    const { during, peak } = instantWindow(event.at);
-    return buildOccurrence({
-      rule,
-      phenomenon,
-      place: null,
-      seasonKey: `${seasonYear}-${event.key}`,
-      during,
-      peak,
-      granularity: "instant",
+  return ordered
+    .filter((event) => filter.events.includes(event))
+    .map((event) => {
+      const { during, peak } = instantWindow(seasonEventDate(seasonYear, event));
+      return buildOccurrence({
+        rule,
+        phenomenon,
+        place: null,
+        seasonKey: `${seasonYear}-${SEASON_KEYS[event]}`,
+        during,
+        peak,
+        granularity: "instant",
+      });
     });
-  });
 }
 
 export function materializeAstronomical(
