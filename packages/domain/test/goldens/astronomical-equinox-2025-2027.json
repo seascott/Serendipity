@@ -1,0 +1,314 @@
+[
+  {
+    "id": "a5f4c4d5-e402-542e-a5a0-9ee23f8b89d4",
+    "ruleId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-mar-equinox",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-03-20T09:01:26.759Z",
+      "end": "2025-03-20T09:01:27.759Z"
+    },
+    "peak": {
+      "start": "2025-03-20T09:01:26.759Z",
+      "end": "2025-03-20T09:01:27.759Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.0"
+  },
+  {
+    "id": "7fd3328e-e827-5a25-83e2-47be9f10b68b",
+    "ruleId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-sep-equinox",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-09-22T18:19:34.559Z",
+      "end": "2025-09-22T18:19:35.559Z"
+    },
+    "peak": {
+      "start": "2025-09-22T18:19:34.559Z",
+      "end": "2025-09-22T18:19:35.559Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.0"
+  },
+  {
+    "id": "63376920-9415-5061-9d41-3746f85fea20",
+    "ruleId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-jun-solstice",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-06-21T02:42:17.883Z",
+      "end": "2025-06-21T02:42:18.883Z"
+    },
+    "peak": {
+      "start": "2025-06-21T02:42:17.883Z",
+      "end": "2025-06-21T02:42:18.883Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.0"
+  },
+  {
+    "id": "989016fd-3cc4-5c04-922a-6c026a56dd6f",
+    "ruleId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-dec-solstice",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-12-21T15:03:03.907Z",
+      "end": "2025-12-21T15:03:04.907Z"
+    },
+    "peak": {
+      "start": "2025-12-21T15:03:03.907Z",
+      "end": "2025-12-21T15:03:04.907Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.0"
+  },
+  {
+    "id": "fffea78c-517e-51f7-b742-b816cbf2fa1d",
+    "ruleId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-mar-equinox",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-03-20T14:45:36.044Z",
+      "end": "2026-03-20T14:45:37.044Z"
+    },
+    "peak": {
+      "start": "2026-03-20T14:45:36.044Z",
+      "end": "2026-03-20T14:45:37.044Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.0"
+  },
+  {
+    "id": "663ca72c-6cb5-5602-8102-2ab6464c4327",
+    "ruleId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-sep-equinox",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-09-23T00:05:38.617Z",
+      "end": "2026-09-23T00:05:39.617Z"
+    },
+    "peak": {
+      "start": "2026-09-23T00:05:38.617Z",
+      "end": "2026-09-23T00:05:39.617Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.0"
+  },
+  {
+    "id": "ad8d7f6f-52db-5d17-8d5a-4eb7f2c010fd",
+    "ruleId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-jun-solstice",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-06-21T08:25:00.316Z",
+      "end": "2026-06-21T08:25:01.316Z"
+    },
+    "peak": {
+      "start": "2026-06-21T08:25:00.316Z",
+      "end": "2026-06-21T08:25:01.316Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.0"
+  },
+  {
+    "id": "22e81d33-97b3-5bba-b8d5-6b0baf24cbc8",
+    "ruleId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-dec-solstice",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-12-21T20:50:22.187Z",
+      "end": "2026-12-21T20:50:23.187Z"
+    },
+    "peak": {
+      "start": "2026-12-21T20:50:22.187Z",
+      "end": "2026-12-21T20:50:23.187Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.0"
+  },
+  {
+    "id": "15379610-b35b-5008-a681-49205cbbe809",
+    "ruleId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-mar-equinox",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-03-20T20:24:43.453Z",
+      "end": "2027-03-20T20:24:44.453Z"
+    },
+    "peak": {
+      "start": "2027-03-20T20:24:43.453Z",
+      "end": "2027-03-20T20:24:44.453Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.0"
+  },
+  {
+    "id": "a229598a-720a-58d4-9367-410cabdb8ed8",
+    "ruleId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-sep-equinox",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-09-23T06:01:18.345Z",
+      "end": "2027-09-23T06:01:19.345Z"
+    },
+    "peak": {
+      "start": "2027-09-23T06:01:18.345Z",
+      "end": "2027-09-23T06:01:19.345Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.0"
+  },
+  {
+    "id": "ea27dbfe-9392-5c70-bc4a-9b9f427e0f51",
+    "ruleId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-jun-solstice",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-06-21T14:10:33.792Z",
+      "end": "2027-06-21T14:10:34.792Z"
+    },
+    "peak": {
+      "start": "2027-06-21T14:10:33.792Z",
+      "end": "2027-06-21T14:10:34.792Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.0"
+  },
+  {
+    "id": "8087f043-b92c-5fe7-90cc-11e2f0c08fa6",
+    "ruleId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-dec-solstice",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-12-22T02:42:18.622Z",
+      "end": "2027-12-22T02:42:19.622Z"
+    },
+    "peak": {
+      "start": "2027-12-22T02:42:18.622Z",
+      "end": "2027-12-22T02:42:19.622Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.0"
+  }
+]

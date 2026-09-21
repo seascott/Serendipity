@@ -1,0 +1,20 @@
+{
+  "name": "@serendipity/jobs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "materialize": "tsx src/materialize.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "node -e \"process.exit(0)\""
+  },
+  "dependencies": {
+    "@serendipity/domain": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
