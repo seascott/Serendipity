@@ -1,0 +1,40 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# builds / caches
+.turbo
+.next
+.expo
+dist
+out
+coverage
+*.tsbuildinfo
+.vercel
+.cache
+
+# env
+.env
+.env.*
+!.env.example
+
+# os / editor
+.DS_Store
+.idea
+.vscode/*
+!.vscode/extensions.json
+
+# native (generated)
+apps/mobile/ios
+apps/mobile/android
+apps/mobile/.expo
+
+# supabase
+supabase/.temp
+supabase/.branches
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*

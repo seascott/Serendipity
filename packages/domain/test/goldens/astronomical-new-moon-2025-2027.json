@@ -1,0 +1,964 @@
+[
+  {
+    "id": "33a3c234-7ca6-5dc8-907c-f909330e8545",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-01-29-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-01-29T12:36:33.845Z",
+      "end": "2025-01-29T12:36:34.845Z"
+    },
+    "peak": {
+      "start": "2025-01-29T12:36:33.845Z",
+      "end": "2025-01-29T12:36:34.845Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "2194efce-e9f1-557b-bb8a-dc6ed532e0f6",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-02-28-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-02-28T00:45:22.920Z",
+      "end": "2025-02-28T00:45:23.920Z"
+    },
+    "peak": {
+      "start": "2025-02-28T00:45:22.920Z",
+      "end": "2025-02-28T00:45:23.920Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "dd544a81-0167-5a81-8a67-e2695210ebf2",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-03-29-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-03-29T10:58:23.943Z",
+      "end": "2025-03-29T10:58:24.943Z"
+    },
+    "peak": {
+      "start": "2025-03-29T10:58:23.943Z",
+      "end": "2025-03-29T10:58:24.943Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "158424e3-33b1-5f53-8592-e16fcfc77264",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-04-27-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-04-27T19:31:42.524Z",
+      "end": "2025-04-27T19:31:43.524Z"
+    },
+    "peak": {
+      "start": "2025-04-27T19:31:42.524Z",
+      "end": "2025-04-27T19:31:43.524Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "de042f94-b146-59d0-9337-0ef2fd1b9cfa",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-05-27-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-05-27T03:02:52.165Z",
+      "end": "2025-05-27T03:02:53.165Z"
+    },
+    "peak": {
+      "start": "2025-05-27T03:02:52.165Z",
+      "end": "2025-05-27T03:02:53.165Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "f24bbb52-9dcf-5f57-922e-aeedf749cb61",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-06-25-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-06-25T10:32:07.505Z",
+      "end": "2025-06-25T10:32:08.505Z"
+    },
+    "peak": {
+      "start": "2025-06-25T10:32:07.505Z",
+      "end": "2025-06-25T10:32:08.505Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "9a57dfb1-a2d2-59f9-8a8f-75f87ed99f52",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-07-24-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-07-24T19:11:43.368Z",
+      "end": "2025-07-24T19:11:44.368Z"
+    },
+    "peak": {
+      "start": "2025-07-24T19:11:43.368Z",
+      "end": "2025-07-24T19:11:44.368Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "adee1823-cc70-5b4f-b554-9087c2131adf",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-08-23-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-08-23T06:07:07.551Z",
+      "end": "2025-08-23T06:07:08.551Z"
+    },
+    "peak": {
+      "start": "2025-08-23T06:07:07.551Z",
+      "end": "2025-08-23T06:07:08.551Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "181dcb80-c5ba-5117-901e-e4299759f336",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-09-21-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-09-21T19:54:45.095Z",
+      "end": "2025-09-21T19:54:46.095Z"
+    },
+    "peak": {
+      "start": "2025-09-21T19:54:45.095Z",
+      "end": "2025-09-21T19:54:46.095Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "fe8dc2ca-bdd4-5920-8099-572cc6b0a012",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-10-21-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-10-21T12:25:48.807Z",
+      "end": "2025-10-21T12:25:49.807Z"
+    },
+    "peak": {
+      "start": "2025-10-21T12:25:48.807Z",
+      "end": "2025-10-21T12:25:49.807Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "72ee0621-491a-5332-b805-fa0c204aea58",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-11-20-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-11-20T06:47:57.148Z",
+      "end": "2025-11-20T06:47:58.148Z"
+    },
+    "peak": {
+      "start": "2025-11-20T06:47:57.148Z",
+      "end": "2025-11-20T06:47:58.148Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "86f45de2-6b7c-50bb-80c0-b4fbbdbb5d48",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2025-12-20-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2025-12-20T01:44:03.071Z",
+      "end": "2025-12-20T01:44:04.071Z"
+    },
+    "peak": {
+      "start": "2025-12-20T01:44:03.071Z",
+      "end": "2025-12-20T01:44:04.071Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "e6c15322-a4bc-5605-a2dc-9eebd3440e3a",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-01-18-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-01-18T19:52:39.367Z",
+      "end": "2026-01-18T19:52:40.367Z"
+    },
+    "peak": {
+      "start": "2026-01-18T19:52:39.367Z",
+      "end": "2026-01-18T19:52:40.367Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "8b7ac3f5-62ac-54c7-95fb-a91b9a5eb8a8",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-02-17-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-02-17T12:01:47.328Z",
+      "end": "2026-02-17T12:01:48.328Z"
+    },
+    "peak": {
+      "start": "2026-02-17T12:01:47.328Z",
+      "end": "2026-02-17T12:01:48.328Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "ea1a2d4f-6bb9-53ff-9ba4-18b441644cb6",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-03-19-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-03-19T01:24:05.931Z",
+      "end": "2026-03-19T01:24:06.931Z"
+    },
+    "peak": {
+      "start": "2026-03-19T01:24:05.931Z",
+      "end": "2026-03-19T01:24:06.931Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "b320cd52-a14c-523c-b4ff-843e85de43c1",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-04-17-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-04-17T11:52:21.628Z",
+      "end": "2026-04-17T11:52:22.628Z"
+    },
+    "peak": {
+      "start": "2026-04-17T11:52:21.628Z",
+      "end": "2026-04-17T11:52:22.628Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "63f57cae-d6f2-5b49-9dfe-a720842b968f",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-05-16-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-05-16T20:01:32.344Z",
+      "end": "2026-05-16T20:01:33.344Z"
+    },
+    "peak": {
+      "start": "2026-05-16T20:01:32.344Z",
+      "end": "2026-05-16T20:01:33.344Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "e1c6cc0d-4bd2-56b2-a631-70b4b35378a3",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-06-15-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-06-15T02:54:39.007Z",
+      "end": "2026-06-15T02:54:40.007Z"
+    },
+    "peak": {
+      "start": "2026-06-15T02:54:39.007Z",
+      "end": "2026-06-15T02:54:40.007Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "06d42d47-830c-55ba-a006-66615bbde2b3",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-07-14-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-07-14T09:44:04.307Z",
+      "end": "2026-07-14T09:44:05.307Z"
+    },
+    "peak": {
+      "start": "2026-07-14T09:44:04.307Z",
+      "end": "2026-07-14T09:44:05.307Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "3c1b4ccf-e139-51a4-9961-55836f7ee6a0",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-08-12-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-08-12T17:37:11.343Z",
+      "end": "2026-08-12T17:37:12.343Z"
+    },
+    "peak": {
+      "start": "2026-08-12T17:37:11.343Z",
+      "end": "2026-08-12T17:37:12.343Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "c321a2b3-549a-5e05-ae08-c351f622a2fa",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-09-11-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-09-11T03:27:28.467Z",
+      "end": "2026-09-11T03:27:29.467Z"
+    },
+    "peak": {
+      "start": "2026-09-11T03:27:28.467Z",
+      "end": "2026-09-11T03:27:29.467Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "fd5112bc-110a-509b-9096-71f66e51004c",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-10-10-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-10-10T15:50:36.724Z",
+      "end": "2026-10-10T15:50:37.724Z"
+    },
+    "peak": {
+      "start": "2026-10-10T15:50:36.724Z",
+      "end": "2026-10-10T15:50:37.724Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "924a7e7c-1474-5e67-b3cc-18812be7fc0f",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-11-09-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-11-09T07:02:42.392Z",
+      "end": "2026-11-09T07:02:43.392Z"
+    },
+    "peak": {
+      "start": "2026-11-09T07:02:42.392Z",
+      "end": "2026-11-09T07:02:43.392Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "1d7386e8-d216-5067-b0ee-7f68ce384ffe",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2026-12-09-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2026-12-09T00:52:31.284Z",
+      "end": "2026-12-09T00:52:32.284Z"
+    },
+    "peak": {
+      "start": "2026-12-09T00:52:31.284Z",
+      "end": "2026-12-09T00:52:32.284Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "8094308f-a6a1-5408-a583-2e32631ffa42",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-01-07-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-01-07T20:25:05.910Z",
+      "end": "2027-01-07T20:25:06.910Z"
+    },
+    "peak": {
+      "start": "2027-01-07T20:25:05.910Z",
+      "end": "2027-01-07T20:25:06.910Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "8fba5bf5-8d41-5740-8811-4abcf566478c",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-02-06-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-02-06T15:56:47.415Z",
+      "end": "2027-02-06T15:56:48.415Z"
+    },
+    "peak": {
+      "start": "2027-02-06T15:56:47.415Z",
+      "end": "2027-02-06T15:56:48.415Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "f84cc699-e67a-564e-abfa-2c0a0ba143dd",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-03-08-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-03-08T09:30:07.391Z",
+      "end": "2027-03-08T09:30:08.391Z"
+    },
+    "peak": {
+      "start": "2027-03-08T09:30:07.391Z",
+      "end": "2027-03-08T09:30:08.391Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "dbfaed08-0422-52fd-8098-b7d6c89c8ca4",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-04-06-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-04-06T23:51:45.366Z",
+      "end": "2027-04-06T23:51:46.366Z"
+    },
+    "peak": {
+      "start": "2027-04-06T23:51:45.366Z",
+      "end": "2027-04-06T23:51:46.366Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "3278ae11-2d83-5a29-98f3-ef272592ed13",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-05-06-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-05-06T10:59:10.533Z",
+      "end": "2027-05-06T10:59:11.533Z"
+    },
+    "peak": {
+      "start": "2027-05-06T10:59:10.533Z",
+      "end": "2027-05-06T10:59:11.533Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "161c7981-8fb2-548b-ac25-f9d50cc51492",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-06-04-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-06-04T19:40:51.143Z",
+      "end": "2027-06-04T19:40:52.143Z"
+    },
+    "peak": {
+      "start": "2027-06-04T19:40:51.143Z",
+      "end": "2027-06-04T19:40:52.143Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "0df36ac1-927a-51a9-8f80-a7044d8d537f",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-07-04-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-07-04T03:02:32.965Z",
+      "end": "2027-07-04T03:02:33.965Z"
+    },
+    "peak": {
+      "start": "2027-07-04T03:02:32.965Z",
+      "end": "2027-07-04T03:02:33.965Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "c9118705-ad31-5ede-8363-b3efd1be5950",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-08-02-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-08-02T10:05:42.274Z",
+      "end": "2027-08-02T10:05:43.274Z"
+    },
+    "peak": {
+      "start": "2027-08-02T10:05:42.274Z",
+      "end": "2027-08-02T10:05:43.274Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "a8b77a48-1ac3-5435-9c96-0fce7508bb42",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-08-31-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-08-31T17:41:40.859Z",
+      "end": "2027-08-31T17:41:41.859Z"
+    },
+    "peak": {
+      "start": "2027-08-31T17:41:40.859Z",
+      "end": "2027-08-31T17:41:41.859Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "f5a4b1e8-8778-5c37-87dd-f607584b098b",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-09-30-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-09-30T02:36:34.580Z",
+      "end": "2027-09-30T02:36:35.580Z"
+    },
+    "peak": {
+      "start": "2027-09-30T02:36:34.580Z",
+      "end": "2027-09-30T02:36:35.580Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "69f681bf-a34b-5f78-b52f-42a2816640d6",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-10-29-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-10-29T13:37:04.567Z",
+      "end": "2027-10-29T13:37:05.567Z"
+    },
+    "peak": {
+      "start": "2027-10-29T13:37:04.567Z",
+      "end": "2027-10-29T13:37:05.567Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "b0895aa6-c930-535a-b73b-6a4249649873",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-11-28-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-11-28T03:24:59.323Z",
+      "end": "2027-11-28T03:25:00.323Z"
+    },
+    "peak": {
+      "start": "2027-11-28T03:24:59.323Z",
+      "end": "2027-11-28T03:25:00.323Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  },
+  {
+    "id": "62316cb0-8b87-57db-b5cc-6f23b84cc51e",
+    "ruleId": "99999999-9999-4999-8999-999999999999",
+    "phenomenonId": "55555555-5555-4555-8555-555555555555",
+    "placeId": null,
+    "scope": "global",
+    "seasonKey": "2027-12-27-new",
+    "family": "astronomy",
+    "tags": [
+      "sky"
+    ],
+    "during": {
+      "start": "2027-12-27T20:12:56.268Z",
+      "end": "2027-12-27T20:12:57.268Z"
+    },
+    "peak": {
+      "start": "2027-12-27T20:12:56.268Z",
+      "end": "2027-12-27T20:12:57.268Z"
+    },
+    "granularity": "instant",
+    "confidence": 0.85,
+    "geom": null,
+    "status": "published",
+    "ruleVersion": 1,
+    "engineVersion": "0.1.1"
+  }
+]
